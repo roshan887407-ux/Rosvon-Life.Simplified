@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete Your Data — Arise</title>
-    <meta name="description" content="Delete your Arise account and all associated data instantly from within the app. Learn what gets deleted and how.">
+    <meta name="description" content="Delete your Arise account and all associated data from within the app or by email request. Learn what gets deleted and how.">
     <style>
         :root {
             --bg: #0D0F14;
@@ -233,7 +233,7 @@
 
         <header>
             <h1>Delete Your Data — <span class="app-name">Arise</span></h1>
-            <p class="subtitle">Your data belongs to you. Delete it instantly from within the app.</p>
+            <p class="subtitle">Your data belongs to you. Delete it instantly from within the app or request deletion via email.</p>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
@@ -243,117 +243,120 @@
         </header>
 
         <!-- ═══ Intro ══════════════════════════════════════════════════════ -->
-        <p>Arise is built on the principle that your data belongs to you — completely and unconditionally. You can delete your account and all associated data at any time, <strong>instantly, from within the app</strong>. There is no waiting period, no email required, and no hoops to jump through.</p>
+        <p>Arise is built on the principle that your data belongs to you — completely and unconditionally. You can delete your account and all associated data directly from within the app, or request account deletion by email.</p>
 
-        <!-- ═══ How to Delete ═════════════════════════════════════════════ -->
+        <!-- ═══ Method 1: In-App Deletion ═════════════════════════════════ -->
         <div class="method-card">
-            <span class="method-badge">📱 ONLY METHOD</span>
-            <h3>📱 Delete from Within the App</h3>
-            <p>Delete all your cloud data, Google Drive backup, Firebase account, and local data in one step. Deletion is <strong>instant and permanent</strong>.</p>
+            <span class="method-badge">RECOMMENDED (METHOD 1)</span>
+            <h3>📱 Delete Directly from Within the App</h3>
+            <p>Delete all your cloud data, Google Drive backup, Firebase account, and local device data in one step. Deletion is <strong>instant and permanent</strong>.</p>
             <ol class="steps">
                 <li>Open the <strong>Arise app</strong> on your Android device.</li>
-                <li>Tap the <strong>Settings</strong> icon (⚙️) in the bottom navigation bar.</li>
-                <li>Scroll down to the <strong>Account</strong> section.</li>
-                <li>Tap <strong>"Delete Account"</strong>.</li>
-                <li>Read the confirmation dialog — it will show you exactly what data will be deleted.</li>
-                <li>Verify your identity by re-authenticating with your Google account.</li>
-                <li>Tap <strong>"Confirm Delete"</strong>. Your account and all data will be <strong>permanently deleted immediately</strong>.</li>
+                <li>Navigate to the <strong>Help &amp; Support</strong> section from the main navigation menu or drawer.</li>
+                <li>Scroll down and tap <strong>"Delete Account &amp; Data"</strong>.</li>
+                <li>Read the confirmation dialog showing what data will be removed.</li>
+                <li>Verify your identity by re-authenticating with your account.</li>
+                <li>Tap <strong>"Confirm Delete"</strong>. Your account and all associated data will be <strong>permanently deleted immediately</strong>.</li>
             </ol>
+        </div>
+
+        <!-- ═══ Method 2: Email Request Deletion ══════════════════════════ -->
+        <div class="method-card" style="border-color: rgba(200, 169, 126, 0.4);">
+            <span class="method-badge" style="background: rgba(200, 169, 126, 0.15); color: var(--accent); border: 1px solid var(--accent);">METHOD 2</span>
+            <h3>📧 Request Account Deletion via Email</h3>
+            <p>If you cannot access the app or prefer email assistance, you can submit an account deletion request to our support team.</p>
+
+            <div class="info-box">
+                <p><strong>Send an email request:</strong></p>
+                <p>📧 Email: <a href="mailto:rosvon.support@gmail.com?subject=Account Deletion Request — Arise App">rosvon.support@gmail.com</a></p>
+                <p>📌 Subject: "Account Deletion Request — Arise App"</p>
+                <p>📝 Include: Your registered email address and username so we can locate your account.</p>
+                <p>⏱️ Processing Time: Within <strong>48 hours</strong>.</p>
+            </div>
+
+            <div class="warning-box">
+                <p><strong>⚠️ Important Note on Email Deletion Requests:</strong> An email request enables us to delete your personal account data stored on <strong>our servers only</strong> (Firebase Firestore, Firebase Storage, and Firebase Authentication). Because your personal Google Drive backups and local phone data are stored privately on your own accounts and device, we cannot remotely access or delete them for you. To delete data from your phone and Google Drive, you must manually delete them using the <strong>Help &amp; Support</strong> section inside the Arise app or by managing your local app data and Google account storage.</p>
+            </div>
         </div>
 
         <!-- ═══ What Gets Deleted ══════════════════════════════════════════ -->
         <section>
             <h2>What Data Gets Deleted?</h2>
-            <p>When you delete your account from within the app, the following data is permanently and irreversibly removed — <strong>all immediately</strong>:</p>
+            <p>Here is a detailed breakdown of how different data locations are handled upon account deletion:</p>
 
             <table>
                 <thead>
                     <tr>
                         <th>Data Type</th>
                         <th>Location</th>
-                        <th>Deleted?</th>
-                        <th>When</th>
+                        <th>Deleted via In-App (Method 1)?</th>
+                        <th>Deleted via Email Request (Method 2)?</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Habits, tasks, journal entries, notes, projects</td>
-                        <td>Google Drive (App Folder)</td>
-                        <td><span class="badge-yes">YES</span></td>
-                        <td><span class="badge-instant">Immediate</span></td>
-                    </tr>
-                    <tr>
                         <td>Username, email, profile picture (DP)</td>
-                        <td>Firebase Firestore</td>
-                        <td><span class="badge-yes">YES</span></td>
-                        <td><span class="badge-instant">Immediate</span></td>
+                        <td>Firebase Firestore &amp; Storage</td>
+                        <td><span class="badge-yes">YES (Instant)</span></td>
+                        <td><span class="badge-yes">YES (By Support)</span></td>
                     </tr>
                     <tr>
                         <td>Level, rank, XP, health, gold, challenges</td>
                         <td>Firebase Firestore</td>
-                        <td><span class="badge-yes">YES</span></td>
-                        <td><span class="badge-instant">Immediate</span></td>
+                        <td><span class="badge-yes">YES (Instant)</span></td>
+                        <td><span class="badge-yes">YES (By Support)</span></td>
                     </tr>
                     <tr>
                         <td>Firebase Authentication account</td>
                         <td>Firebase Auth</td>
-                        <td><span class="badge-yes">YES</span></td>
-                        <td><span class="badge-instant">Immediate</span></td>
-                    </tr>
-                    <tr>
-                        <td>Local app data (on-device DataStore)</td>
-                        <td>Your phone</td>
-                        <td><span class="badge-yes">YES</span></td>
-                        <td><span class="badge-instant">Immediate</span></td>
+                        <td><span class="badge-yes">YES (Instant)</span></td>
+                        <td><span class="badge-yes">YES (By Support)</span></td>
                     </tr>
                     <tr>
                         <td>Friends list and challenge history</td>
                         <td>Firebase Firestore</td>
-                        <td><span class="badge-yes">YES</span></td>
-                        <td><span class="badge-instant">Immediate</span></td>
+                        <td><span class="badge-yes">YES (Instant)</span></td>
+                        <td><span class="badge-yes">YES (By Support)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Habits, tasks, journal entries, notes, projects</td>
+                        <td>Google Drive (App Data Folder)</td>
+                        <td><span class="badge-yes">YES (Instant)</span></td>
+                        <td>⚠️ Manual deletion required by user via Help &amp; Support or Google Account</td>
+                    </tr>
+                    <tr>
+                        <td>Local app data (on-device DataStore)</td>
+                        <td>Your phone</td>
+                        <td><span class="badge-yes">YES (Instant)</span></td>
+                        <td>⚠️ Manual deletion required by user via Help &amp; Support or app uninstall</td>
                     </tr>
                     <tr>
                         <td>Anonymized analytics data</td>
                         <td>Firebase Analytics</td>
                         <td>Anonymized (not linked to identity)</td>
-                        <td>Per Google's 14-month retention policy</td>
+                        <td>Anonymized (per Google's 14-month policy)</td>
                     </tr>
                     <tr>
                         <td>Crash/performance logs</td>
                         <td>Firebase Crashlytics</td>
                         <td>Anonymized (not linked to identity)</td>
-                        <td>Per Google's 90-day retention policy</td>
+                        <td>Anonymized (per Google's 90-day policy)</td>
                     </tr>
                 </tbody>
             </table>
 
             <div class="warning-box">
-                <p><strong>⚠️ Deletion is permanent and irreversible.</strong> Once your account is deleted, your data cannot be recovered. Please make sure you want to proceed before confirming deletion.</p>
+                <p><strong>⚠️ Deletion is permanent and irreversible.</strong> Once your server account and data are deleted, they cannot be recovered.</p>
             </div>
 
-            <h3>Local Data Note</h3>
-            <p>If you used Arise in <strong>Guest (Local) Mode</strong> without an account, your data is stored only on your device. To delete it, simply <strong>uninstall the app</strong> from your Android device. This will remove all locally stored app data.</p>
-        </section>
-
-        <!-- ═══ Cannot Access the App? ════════════════════════════════════ -->
-        <section>
-            <h2>What If I Cannot Access the App?</h2>
-            <p>If you are unable to access the app (e.g., lost phone, app won't open), you may contact us for assistance:</p>
-
-            <div class="info-box">
-                <p><strong>Contact for assistance:</strong></p>
-                <p>📧 Email: <a href="mailto:roshan887407@gmail.com?subject=Account Deletion Assistance — Arise App">roshan887407@gmail.com</a></p>
-                <p>📌 Subject: "Account Deletion Assistance — Arise App"</p>
-                <p>📝 Include: Your Arise account email address and username so we can locate your account.</p>
-            </div>
-
-            <p>We will verify your identity and assist you with account deletion. Response time: within <strong>48 hours</strong>.</p>
+            <h3>Guest Mode (Local Data) Note</h3>
+            <p>If you use Arise in <strong>Guest (Local) Mode</strong> without an account, your data is stored only on your device. To delete it, simply <strong>uninstall the app</strong> or clear storage in your device settings. This completely removes all locally stored data.</p>
         </section>
 
         <!-- ═══ Rights ════════════════════════════════════════════════════ -->
         <section>
             <h2>Your Legal Rights Regarding Your Data</h2>
-            <p>Depending on where you are located, you have the following rights:</p>
+            <p>Depending on your jurisdiction (GDPR, CCPA, DPDP), you have the right to request deletion of your personal data:</p>
 
             <table>
                 <thead>
@@ -367,37 +370,32 @@
                     <tr>
                         <td><strong>Right to Deletion</strong> (Right to be Forgotten)</td>
                         <td>All users, GDPR (EU), CCPA (California), DPDP (India)</td>
-                        <td>Use in-app deletion (Settings → Account → Delete Account)</td>
+                        <td>Use in-app deletion (Help &amp; Support section) or email <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a></td>
                     </tr>
                     <tr>
                         <td><strong>Right to Access</strong></td>
                         <td>All users</td>
-                        <td>Email <a href="mailto:roshan887407@gmail.com">roshan887407@gmail.com</a></td>
+                        <td>Email <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a></td>
                     </tr>
                     <tr>
                         <td><strong>Right to Portability</strong></td>
                         <td>All users</td>
-                        <td>Via Google Drive backup (Settings → Backup)</td>
+                        <td>Via Google Drive backup feature in-app</td>
                     </tr>
                     <tr>
                         <td><strong>Right to Correction</strong></td>
                         <td>All users</td>
-                        <td>Update from within the App (Settings → Profile)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Right to Restrict Processing</strong></td>
-                        <td>GDPR users</td>
-                        <td>Email <a href="mailto:roshan887407@gmail.com">roshan887407@gmail.com</a></td>
+                        <td>Update profile details in-app or via Help &amp; Support</td>
                     </tr>
                     <tr>
                         <td><strong>Right to Withdraw Consent</strong></td>
                         <td>All users</td>
-                        <td>Settings → AI Privacy Controls, or disable sync</td>
+                        <td>Settings → AI Privacy Controls, or disable cloud sync</td>
                     </tr>
                 </tbody>
             </table>
 
-            <p>We will respond to all data rights requests within the timeframe required by applicable law (typically within <strong>30 days</strong>).</p>
+            <p>We respond to all data privacy requests within the required statutory timeframe (typically within <strong>30 days</strong>).</p>
         </section>
 
         <!-- ═══ Contact ══════════════════════════════════════════════════ -->
@@ -405,8 +403,8 @@
             <h2>Contact Us</h2>
             <div class="info-box">
                 <p><strong>Developer:</strong> Roshan Sharma</p>
-                <p><strong>Email:</strong> <a href="mailto:roshan887407@gmail.com">roshan887407@gmail.com</a></p>
-                <p><strong>App:</strong> Arise — A Self Development Ecosystem</p>
+                <p><strong>Email:</strong> <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a></p>
+                <p><strong>App:</strong> Arise — Digital Discipline &amp; Growth</p>
                 <p><strong>Platform:</strong> Google Play Store (Android)</p>
                 <p><strong>Response Time:</strong> Within 48 hours</p>
             </div>
@@ -420,8 +418,8 @@
 
         <footer>
             <p>&copy; 2025–2026 Roshan Sharma. All rights reserved.</p>
-            <p>Arise — A Self Development Ecosystem</p>
-            <p style="margin-top: 12px;">This page satisfies Google Play Store's account deletion requirements (effective December 2023) and applicable data protection laws including GDPR, CCPA, and India's DPDP Act.</p>
+            <p>Arise — Digital Discipline &amp; Growth</p>
+            <p style="margin-top: 12px;">This page satisfies Google Play Store's account deletion requirements and applicable data protection laws including GDPR, CCPA, and India's DPDP Act.</p>
         </footer>
 
     </div>
