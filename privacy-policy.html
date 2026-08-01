@@ -285,7 +285,7 @@
                 <span class="commitment-emoji">☁️</span>
                 <div class="commitment-text">
                     <strong>Cloud sync is strictly opt-in.</strong>
-                    <p>If you sign in, your data syncs to your own private Firebase/Google Drive storage. Only you can access it. We cannot read your personal entries.</p>
+                    <p>If you sign in, your data syncs to your own private Firebase storage for community stats and Google Drive storage for full backups. Only you can access it. We cannot read your personal entries.</p>
                 </div>
             </div>
 
@@ -301,7 +301,7 @@
                 <span class="commitment-emoji">🤖</span>
                 <div class="commitment-text">
                     <strong>AI that respects your privacy.</strong>
-                    <p>Our AI assistant "Aria" runs via Google Gemini API by default. You can opt to disable Google's access completely, or add your own personal API key from popular companies for ultimate data privacy.</p>
+                    <p>Our AI assistant "Aria" processes requests via Firebase Vertex AI (powered by Google Gemini). You can customize or completely disable AI access to your personal data anytime in settings.</p>
                 </div>
             </div>
 
@@ -437,6 +437,21 @@
                         <td>Deliver task reminders, focus session alerts, and service notifications</td>
                         <td>No</td>
                     </tr>
+                    <tr>
+                        <td><strong>Exact Alarms</strong> (SCHEDULE_EXACT_ALARM)</td>
+                        <td>Schedule precise focus session timers, alarm notifications, and habit reminders</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Boot Completed</strong> (RECEIVE_BOOT_COMPLETED)</td>
+                        <td>Restore active focus timers and scheduled habit notifications after device restart</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>In-App Billing</strong> (BILLING)</td>
+                        <td>Process optional in-app purchases and subscriptions via Google Play Store</td>
+                        <td>Yes (processed by Google Play)</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -446,14 +461,11 @@
             <h2>5. AI Features and Data Processing</h2>
             <p>Arise includes an AI assistant called "Aria". You have complete control over how Aria processes your data:</p>
 
-            <h3>5.1 Gemini API Integration (Default)</h3>
-            <p>By default, Aria uses the Google Gemini API to process conversations and provide guidance. Your queries and contextual data are processed transiently by Google to generate responses. They are not stored or used to train Google's models.</p>
+            <h3>5.1 Firebase Vertex AI Processing</h3>
+            <p>Aria processes AI requests using Firebase Vertex AI (powered by Google Gemini). Your queries and contextual data are processed transiently by Google Cloud infrastructure to generate responses. Your data is not stored permanently or used to train public AI models.</p>
 
-            <h3>5.2 Custom API Configuration (Max Privacy)</h3>
-            <p>For users who want ultimate privacy and data ownership, you can opt to remove Google's API access entirely. Arise allows you to enter your own personal API key from popular companies (like Google Gemini, OpenAI, or Groq) to route requests directly from your device to the service provider without intermediary collection.</p>
-
-            <h3>5.3 AI Privacy Controls</h3>
-            <p>You can individually enable or disable Aria's access to each category of your data (such as habits, tasks, projects, journal entries, or player stats) via <strong>Settings → AI Privacy Control</strong>. You can completely turn off AI features at any time.</p>
+            <h3>5.2 AI Privacy Controls</h3>
+            <p>You can individually enable or disable Aria's access to each category of your data (such as habits, tasks, projects, journal entries, notes, or player stats) via <strong>Settings → AI Privacy Control</strong>. You can completely turn off AI features at any time.</p>
         </section>
 
         <!-- ═══ 6. Data Storage and Security ═════════════════════════════ -->
@@ -521,6 +533,11 @@
                         <td>Cloud data storage and sync (opt-in)</td>
                     </tr>
                     <tr>
+                        <td>Firebase Storage</td>
+                        <td>Google LLC</td>
+                        <td>Profile picture storage (opt-in)</td>
+                    </tr>
+                    <tr>
                         <td>Firebase Analytics</td>
                         <td>Google LLC</td>
                         <td>Anonymized usage analytics</td>
@@ -529,6 +546,11 @@
                         <td>Google AdMob</td>
                         <td>Google LLC</td>
                         <td>In-app advertising</td>
+                    </tr>
+                    <tr>
+                        <td>Google Play Billing</td>
+                        <td>Google LLC</td>
+                        <td>In-app purchases and subscription processing</td>
                     </tr>
                     <tr>
                         <td>Google Drive API</td>
@@ -541,14 +563,9 @@
                         <td>Abuse protection via Play Integrity</td>
                     </tr>
                     <tr>
-                        <td>Google Gemini API</td>
+                        <td>Firebase Vertex AI</td>
                         <td>Google LLC</td>
-                        <td>AI assistant processing (default)</td>
-                    </tr>
-                    <tr>
-                        <td>Custom AI Providers</td>
-                        <td>User-selected (Google, OpenAI, Groq, etc.)</td>
-                        <td>AI chat processing using your personal API key (opt-in)</td>
+                        <td>AI assistant processing (powered by Gemini)</td>
                     </tr>
                 </tbody>
             </table>
@@ -556,9 +573,10 @@
             <h3>8.2 Community Features</h3>
             <p>If you participate in the Community features to invite friends and grow together, the following information is stored on Firebase and is visible to other Arise users:</p>
             <ul>
-                <li>Username and Display Picture (DP)</li>
+                <li>Username, Display Name, Bio, and Profile Picture</li>
                 <li>Level, Rank, and Experience Points (EXP)</li>
                 <li>Current Health, Gold, and Active Challenges</li>
+                <li>Equipped Title, Unlocked Titles, Achievements, and Total Tasks Completed</li>
             </ul>
             <p>No other personal data (habits, tasks, projects, journal notes, screen time, or email address) is ever shared with other users.</p>
 
@@ -574,7 +592,7 @@
                 <li><strong>Cloud Data (Firebase):</strong> Retained while your account is active. Upon in-app account deletion, cloud data is permanently deleted after account verification.</li>
                 <li><strong>Google Drive Backups:</strong> Retained in your personal Google Drive while your account is active. In-app account deletion deletes the app backup from Google Drive before deleting your account. If you request deletion outside the app, you may also remove the backup or revoke Arise's access from your Google Account settings.</li>
                 <li><strong>Analytics Data:</strong> Anonymized analytics data is retained per Google's data retention policies (default: 14 months, not linked to your identity).</li>
-                <li><strong>AI Conversations:</strong> Stored locally on your device. Cloud AI API calls are transient — data is not retained by Groq beyond the API request.</li>
+                <li><strong>AI Conversations:</strong> Stored locally on your device. Cloud AI API calls are transient — data is not retained by Google Cloud beyond generating the AI response.</li>
             </ul>
         </section>
 
@@ -618,7 +636,7 @@
         <!-- ═══ 11. International Data Transfers ═════════════════════════ -->
         <section>
             <h2>11. International Data Transfers</h2>
-            <p>Arise uses cloud services provided by Google LLC (United States) and Groq, Inc. (United States). If you are located outside the United States, your data may be transferred to and processed in the United States or other countries where our service providers maintain facilities.</p>
+            <p>Arise uses cloud services provided by Google LLC (United States). If you are located outside the United States, your data may be transferred to and processed in the United States or other countries where our service providers maintain facilities.</p>
             <p>These transfers are protected by the service providers' compliance with applicable data protection frameworks, including Standard Contractual Clauses (SCCs) and the EU-U.S. Data Privacy Framework where applicable.</p>
         </section>
 
@@ -660,7 +678,7 @@
             <p>If you have any questions, concerns, requests, or complaints regarding this Privacy Policy or our data practices, please contact us at:</p>
             <div class="info-box">
                 <p><strong>Developer:</strong> Roshan Sharma</p>
-                <p><strong>Email:</strong> <a href="mailto:roshan887407@gmail.com">roshan887407@gmail.com</a></p>
+                <p><strong>Email:</strong> <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a></p>
                 <p><strong>App:</strong> Arise — Digital Discipline &amp; Growth</p>
                 <p><strong>Platform:</strong> Google Play Store (Android)</p>
             </div>
@@ -724,12 +742,18 @@
                         <td>Google AdMob</td>
                         <td>Advertising</td>
                     </tr>
+                    <tr>
+                        <td>Purchase history</td>
+                        <td>By Google Play Billing</td>
+                        <td>Google Play Store</td>
+                        <td>In-app purchases &amp; subscriptions</td>
+                    </tr>
                 </tbody>
             </table>
 
             <div class="info-box">
                 <p><strong>Data encryption:</strong> All data is encrypted in transit (HTTPS/TLS). Cloud data is encrypted at rest by Google.</p>
-                <p><strong>Data deletion:</strong> You can request account and data deletion from within the App settings or by contacting us at <a href="mailto:roshan887407@gmail.com">roshan887407@gmail.com</a>.</p>
+                <p><strong>Data deletion:</strong> You can request account and data deletion from within the App settings or by contacting us at <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a>.</p>
             </div>
         </section>
 
