@@ -309,7 +309,7 @@
                 <span class="commitment-emoji">🗑️</span>
                 <div class="commitment-text">
                     <strong>Full deletion on demand.</strong>
-                    <p>Delete your account and your app data is removed immediately after account verification. No retention games.</p>
+                    <p>Delete your account from Settings → Help &amp; Support and your app data is removed immediately after account verification. No retention games.</p>
                 </div>
             </div>
         </div>
@@ -325,15 +325,14 @@
                 <li><strong>Account Information:</strong> When you create an account, we collect your email address, username, and password. Passwords are handled exclusively by Firebase Authentication — we never see, store, or have access to your raw password.</li>
                 <li><strong>Profile Information:</strong> Display name and profile picture, only if you choose to add or update them.</li>
                 <li><strong>User-Generated Content:</strong> Tasks, habits, journal entries, notes, projects, areas, resources, and focus session settings. This content is stored locally on your device by default and synced to the cloud only if you opt in.</li>
-                <li><strong>AI Chat Conversations:</strong> Messages you send to our AI assistant "Aria" are stored locally on your device. If you enable Cloud AI mode, your messages are sent to a third-party AI service for processing (see Section 5).</li>
-                <li><strong>Survey Responses:</strong> If you complete the optional in-app onboarding survey, your responses (e.g., age, life expectancy estimate, personal goals) are stored locally on your device and used solely to personalize your experience.</li>
+                <li><strong>AI Chat Conversations:</strong> Messages you send to our AI assistant "Aria" are stored locally on your device. When you ask Aria for coaching, your queries are processed transiently via Firebase Vertex AI (Google Cloud) as described in Section 5.</li>
             </ul>
 
             <h3>1.2 Information Collected Automatically</h3>
             <ul>
                 <li><strong>Analytics Data:</strong> We use Firebase Analytics (Google) to collect anonymized, aggregated usage statistics such as screen views, feature usage frequency, session duration, and in-app events. This data is not linked to your personal identity and is used solely to understand how features are used and to improve the App.</li>
                 <li><strong>Crash and Performance Data:</strong> We collect anonymized crash reports and performance metrics through Firebase to diagnose and fix technical issues. This includes device type, operating system version, app version, and stack traces. This data is not linked to your personal identity.</li>
-                <li><strong>Advertising Data:</strong> We use Google AdMob to display non-personalized banner advertisements within the App. AdMob may collect device advertising identifiers and limited device information as described in Google's privacy policy. You can opt out of personalized advertising in your device's Google Settings. Ads are displayed based on in-app gamification health — users in good standing see fewer or no ads.</li>
+                <li><strong>Advertising Data:</strong> We use Google AdMob to display non-personalized penalty advertisements when triggered by in-app gamification rules. AdMob may collect device advertising identifiers and limited device information as described in Google's privacy policy. You can opt out of personalized advertising in your device's Google Settings. Ads are displayed based on in-app gamification health — users in good standing see fewer or no ads.</li>
             </ul>
 
             <h3>1.3 Information Accessed On-Device Only (Never Collected)</h3>
@@ -465,7 +464,7 @@
             <p>Aria processes AI requests using Firebase Vertex AI (powered by Google Gemini). Your queries and contextual data are processed transiently by Google Cloud infrastructure to generate responses. Your data is not stored permanently or used to train public AI models.</p>
 
             <h3>5.2 AI Privacy Controls</h3>
-            <p>You can individually enable or disable Aria's access to each category of your data (such as habits, tasks, projects, journal entries, notes, or player stats) via <strong>Settings → AI Privacy Control</strong>. You can completely turn off AI features at any time.</p>
+            <p>You can individually enable or disable Aria's access to each category of your data (such as habits, tasks, projects, journal entries, notes, player stats, or focus session stats) via <strong>Settings → AI Privacy Control</strong>. When Protocol access is enabled, Aria can only access focus session summary data (total focus duration and completion streaks) to provide productivity coaching. Aria <strong>never</strong> has access to your screen time, app usage statistics, individual app package names, or blocked app lists. You can completely turn off AI features at any time.</p>
         </section>
 
         <!-- ═══ 6. Data Storage and Security ═════════════════════════════ -->
@@ -605,7 +604,7 @@
             <ul>
                 <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
                 <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data.</li>
-                <li><strong>Deletion:</strong> Request deletion of your account and associated data. You can do this directly from <strong>Settings</strong> within the App.</li>
+                <li><strong>Deletion:</strong> Request deletion of your account and associated data. You can do this directly from <strong>Settings → Help &amp; Support</strong> within the App.</li>
                 <li><strong>Data Portability:</strong> Receive your data in a structured, machine-readable format via the Google Drive backup feature.</li>
                 <li><strong>Withdraw Consent:</strong> Revoke consent for cloud sync, cloud AI, or any optional feature at any time via Settings.</li>
             </ul>
