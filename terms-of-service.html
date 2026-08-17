@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service — Rosvon</title>
-    <meta name="description" content="Terms of Service for Rosvon — A Self Development Ecosystem. Android application by Roshan Sharma.">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <title>Terms of Service - Rosvon</title>
+    <meta name="description" content="Terms of Service for Rosvon - Digital Discipline and Growth. Android application by Roshan Sharma.">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/favicon.png">
     <style>
         :root {
             --bg: #0D0F14;
@@ -16,19 +16,15 @@
             --border: rgba(200, 169, 126, 0.15);
             --text: #F0EDE8;
             --text-secondary: #9A9590;
-            --text-muted: #6B7080;
             --accent: #C8A97E;
             --accent-light: #E8C99A;
-            --accent-soft: rgba(200, 169, 126, 0.08);
             --warning: #ffb347;
-            --success: #4ade80;
             --danger: #f87171;
             --glass-bg: rgba(28, 32, 48, 0.6);
             --glass-border: rgba(200, 169, 126, 0.12);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: var(--bg);
@@ -36,32 +32,13 @@
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
         }
-
         .container { max-width: 780px; margin: 0 auto; padding: 40px 24px 80px; }
-
-        header {
-            text-align: center;
-            margin-bottom: 48px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+        header { text-align: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
         header .app-name { color: var(--accent); }
         header .last-updated { font-size: 0.9rem; color: var(--text-secondary); }
         header .effective-date { font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px; }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-top: 16px;
-            font-size: 0.85rem;
-            flex-wrap: wrap;
-        }
-        .nav-links a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
-        .nav-links a:hover { text-decoration: underline; color: var(--accent-light); }
-
+        .nav-links { display: flex; justify-content: center; gap: 24px; margin-top: 16px; font-size: 0.85rem; flex-wrap: wrap; }
         .commitment-card {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -72,551 +49,186 @@
             margin-bottom: 40px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(200, 169, 126, 0.08);
         }
-        .commitment-card h2 { font-size: 1.2rem; margin-bottom: 20px; color: var(--accent); border-bottom: none; padding-bottom: 0; }
-        .commitment-point { display: flex; gap: 12px; margin-bottom: 16px; }
+        .commitment-card h2 { font-size: 1.2rem; margin-bottom: 20px; color: var(--accent); border-bottom: 0; padding-bottom: 0; }
+        .commitment-point { margin-bottom: 16px; }
         .commitment-point:last-child { margin-bottom: 0; }
-        .commitment-emoji { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
         .commitment-text strong { display: block; font-size: 0.95rem; margin-bottom: 2px; }
-        .commitment-text p { font-size: 0.88rem; color: var(--text-secondary); }
-
+        .commitment-text p { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0; }
         section { margin-bottom: 36px; }
-
-        h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        h3 { font-size: 1.05rem; font-weight: 600; margin-top: 18px; margin-bottom: 8px; color: var(--accent); }
-
+        h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
         p { margin-bottom: 12px; color: var(--text-secondary); }
-
-        ul, ol { margin-bottom: 12px; padding-left: 20px; }
+        ul { margin-bottom: 12px; padding-left: 20px; }
         li { margin-bottom: 8px; color: var(--text-secondary); }
         li strong { color: var(--text); }
-
-        .info-box {
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            border-left: 3px solid var(--accent);
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin: 16px 0;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-        }
-        .info-box p { margin-bottom: 4px; font-size: 0.9rem; }
-        .info-box p:last-child { margin-bottom: 0; }
-
-        .warning-box {
-            background: rgba(255, 179, 71, 0.04);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-left: 3px solid var(--warning);
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin: 16px 0;
-        }
-        .warning-box p { margin-bottom: 4px; font-size: 0.9rem; }
-
-        .danger-box {
-            background: rgba(248, 113, 113, 0.04);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-left: 3px solid var(--danger);
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin: 16px 0;
-        }
-        .danger-box p { margin-bottom: 4px; font-size: 0.9rem; }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0;
-            font-size: 0.9rem;
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--glass-border); }
-        th { background: rgba(200, 169, 126, 0.06); color: var(--text); font-weight: 600; }
-        td { color: var(--text-secondary); }
-
-        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
-        a:hover { text-decoration: underline; color: var(--accent-light); }
-
-        footer {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
+        .warning-box, .danger-box { border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+        .warning-box { background: rgba(255, 179, 71, 0.04); border-left: 3px solid var(--warning); }
+        .danger-box { background: rgba(248, 113, 113, 0.04); border-left: 3px solid var(--danger); }
+        .warning-box p, .danger-box p { margin-bottom: 0; font-size: 0.9rem; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent-light); text-decoration: underline; }
+        footer { text-align: center; padding-top: 40px; border-top: 1px solid var(--border); font-size: 0.85rem; }
         footer p { color: var(--text-secondary); }
-
         @media (max-width: 600px) {
             .container { padding: 24px 16px 60px; }
             header h1 { font-size: 1.5rem; }
             h2 { font-size: 1.1rem; }
-            table { font-size: 0.8rem; }
-            th, td { padding: 8px 10px; }
             .nav-links { flex-direction: column; align-items: center; gap: 8px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-
         <header>
-            <h1>Terms of Service — <span class="app-name">Rosvon</span></h1>
-            <p class="last-updated">Last Updated: June 17, 2026</p>
-            <p class="effective-date">Effective Date: June 17, 2026</p>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="community-guidelines.html">Community Guidelines</a>
-                <a href="delete-account.html">Delete My Data</a>
-            </div>
+            <h1>Terms of Service - <span class="app-name">Rosvon</span></h1>
+            <p class="last-updated">Last Updated: August 13, 2026</p>
+            <p class="effective-date">Effective Date: August 13, 2026</p>
         </header>
 
-        <!-- ═══ Commitment Card ═══════════════════════════════════════════ -->
         <div class="commitment-card">
-            <h2>🔒 Our Commitment to You</h2>
-
-            <div class="commitment-point">
-                <span class="commitment-emoji">📱</span>
-                <div class="commitment-text">
-                    <strong>You own your data. Completely.</strong>
-                    <p>Everything you create in Arise — habits, tasks, journal entries, notes, projects — belongs to you and only you. Your personal data is backed up to your own Google Drive. We have no claim over your personal content.</p>
-                </div>
-            </div>
-
-            <div class="commitment-point">
-                <span class="commitment-emoji">🚫</span>
-                <div class="commitment-text">
-                    <strong>We don't collect your data to profit from it.</strong>
-                    <p>We are not in the business of selling your information. We don't build ad profiles from your personal data. We don't share it with marketers. Period.</p>
-                </div>
-            </div>
-
-            <div class="commitment-point">
-                <span class="commitment-emoji">🎯</span>
-                <div class="commitment-text">
-                    <strong>Our Mission: Help you understand yourself.</strong>
-                    <p>Arise exists to help you understand yourself deeply, make better decisions on your own, stop being influenced by others, and face reality instead of escaping from it. This is a self-development ecosystem — not a social media platform.</p>
-                </div>
-            </div>
-
-            <div class="commitment-point">
-                <span class="commitment-emoji">📵</span>
-                <div class="commitment-text">
-                    <strong>Protocol: fighting phone addiction, not enabling it.</strong>
-                    <p>Billion-dollar companies invest in keeping you on your screen. Protocol is the counter-force. All data it uses stays on your device — we never see it.</p>
-                </div>
-            </div>
-
-            <div class="commitment-point">
-                <span class="commitment-emoji">🤖</span>
-                <div class="commitment-text">
-                    <strong>AI coaching designed with privacy first.</strong>
-                    <p>Our AI assistant Aria uses the Gemini API. Your data is processed transiently, never saved externally, and you can opt out or control access at any time. Upcoming: bring your own API keys for even more privacy.</p>
-                </div>
-            </div>
-
-            <div class="commitment-point">
-                <span class="commitment-emoji">🗑️</span>
-                <div class="commitment-text">
-                    <strong>Delete everything, instantly.</strong>
-                    <p>Permanently delete your account and all associated data at any time from within the app (Settings → Account → Delete Account). Instant deletion. No waiting period, no email required, no fine print.</p>
-                </div>
-            </div>
+            <h2>Important Summary</h2>
+            <div class="commitment-point"><div class="commitment-text"><strong>You retain ownership of your content.</strong><p>Rosvon does not acquire ownership of your tasks, habits, projects, journal entries, notes, or other personal content.</p></div></div>
+            <div class="commitment-point"><div class="commitment-text"><strong>Rosvon is for adults.</strong><p>You must be at least 18 years old and legally competent to accept these Terms.</p></div></div>
+            <div class="commitment-point"><div class="commitment-text"><strong>AI and suggested activities are optional.</strong><p>They may be incomplete, unsuitable, or inaccurate. You remain responsible for deciding what is safe and appropriate for you.</p></div></div>
         </div>
 
-        <p>These Terms of Service ("Terms") constitute a legally binding agreement between you and Roshan Sharma ("Developer", "we", "us", or "our") governing your use of the Arise mobile application ("App", "Service") available on the Google Play Store. <strong>Arise — A Self Development Ecosystem.</strong> By downloading, installing, or using the App, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree, please uninstall the App immediately.</p>
+        <p>These Terms form an agreement between you and Roshan Sharma ("Developer", "we", "us", or "our") for your use of the Rosvon Android application (the "App" or "Service"). By installing, accessing, creating an account, purchasing an item, or using Rosvon as a guest, you agree to these Terms and the linked Privacy Policy. If you do not agree, do not use the App.</p>
 
-        <!-- ═══ 1. Acceptance ════════════════════════════════════════════ -->
         <section>
-            <h2>1. Acceptance of Terms and Eligibility</h2>
+            <h2>1. Eligibility and Accounts</h2>
             <ul>
-                <li>By using the App, you confirm you have read and agree to these Terms.</li>
-                <li>Arise is designed to be <strong>suitable for all age groups</strong>. There is no minimum age restriction. The app promotes self-development, discipline, and healthy habits — values beneficial for users of every age.</li>
-                <li>For younger users, we encourage parents and guardians to explore the app alongside them to ensure it aligns with their family values.</li>
-                <li>You confirm that you have the legal capacity to enter into a binding agreement in your jurisdiction, or that a parent or legal guardian is accepting these Terms on your behalf.</li>
-                <li>If you are using the App on behalf of an organization, you represent that you have authority to bind that organization to these Terms.</li>
+                <li><strong>18+ only:</strong> You represent that you are at least 18 years old and legally capable of entering this agreement. Rosvon is not directed to children or offered through parental consent.</li>
+                <li>You may use available local features as a guest. Google Sign-In is required for cloud backup, restore, purchases tied to an account, and community features.</li>
+                <li>You must provide accurate account information, protect access to your Google account and device, and promptly report suspected unauthorized use.</li>
+                <li>Google Sign-In is also governed by Google's applicable terms and privacy policy.</li>
             </ul>
         </section>
 
-        <!-- ═══ 2. Description of Service ══════════════════════════════ -->
         <section>
-            <h2>2. Description of Service</h2>
-            <p>Arise is a self-development ecosystem designed to help you understand yourself, make better decisions, avoid external influence, and face reality with clarity. The App provides:</p>
+            <h2>2. What Rosvon Provides</h2>
+            <p>Rosvon is a self-development and productivity tool. Depending on version, device, permissions, sign-in status, region, and purchases, it may provide:</p>
             <ul>
-                <li><strong>Habit Tracking &amp; Streaks:</strong> Daily habit logging with XP/gamification rewards.</li>
-                <li><strong>Task &amp; Project Management:</strong> Organize tasks, projects, areas, and resources.</li>
-                <li><strong>Daily Journaling:</strong> Private journaling and reflection tools.</li>
-                <li><strong>Notes:</strong> Personal note-taking system.</li>
-                <li><strong>Digital Discipline (Protocol):</strong> Screen time awareness, focus sessions, and optional app discipline tools.</li>
-                <li><strong>AI Coaching (Aria):</strong> AI-powered personal coaching using the Gemini API, with opt-out capability.</li>
-                <li><strong>Community Features:</strong> Leaderboard, Add Friends, and Challenge Friends — no posts, no feed, no content sharing.</li>
-                <li><strong>Gamification:</strong> XP system, levels, ranks, health, gold, achievements, and in-app reward store.</li>
-                <li><strong>Widgets:</strong> Home screen widgets for quick task access.</li>
+                <li>user-created and suggested tasks, habits, goals, projects, roadmaps, reminders, journals, notes, reflections, and personal profile fields;</li>
+                <li>focus timers, screen-time information, app limits, blocking tools, Strict Mode, notifications, and related device controls;</li>
+                <li>gamification including XP, levels, Gold, Health/HP, lives, keys, credits, streaks, achievements, penalties, revives, and leaderboards;</li>
+                <li>Aria AI chat, reflection prompts, task creation on express request, and AI-generated project plans;</li>
+                <li>community profiles, user search, public statistics or leaderboard participation, articles, links, and embedded YouTube videos; and</li>
+                <li>optional Google Drive backup and restore, Firebase account/community services, analytics, crash reporting, performance monitoring, advertising, and Google Play Billing.</li>
             </ul>
-            <p>The App is provided "as is" and we reserve the right to modify, add, or remove features at any time without prior notice.</p>
+            <p>Features may be experimental, changed, limited, suspended, or removed. Rosvon does not guarantee any productivity, academic, fitness, financial, relationship, or personal-development outcome.</p>
         </section>
 
-        <!-- ═══ 3. User Accounts ═════════════════════════════════════════ -->
         <section>
-            <h2>3. User Accounts</h2>
-
-            <h3>3.1 Guest Mode vs. Registered Accounts</h3>
-            <p>You may use the App fully in <strong>Guest (Local) Mode</strong> without creating an account. All data remains on your device only. If you create an account (via Google Sign-In), you enable cloud backup and community features.</p>
-
-            <h3>3.2 Account Responsibilities</h3>
-            <ul>
-                <li>You must provide accurate, current, and complete information when creating an account.</li>
-                <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
-                <li>You are responsible for all activities that occur under your account.</li>
-                <li>You must immediately notify us at <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a> if you suspect unauthorized access to your account.</li>
-                <li>You may not create accounts for others without their express permission.</li>
-            </ul>
-
-            <h3>3.3 Account Suspension and Termination</h3>
-            <p>We reserve the right to suspend or permanently terminate accounts that violate these Terms, particularly the Acceptable Use Policy in Section 7, or that engage in fraudulent, abusive, or harmful behavior. We will endeavor to notify you before taking such action unless it would endanger safety, security, or violate legal obligations.</p>
+            <h2>3. Suggested Activities, Health, and Personal Safety</h2>
+            <p>Tasks, habits, challenges, articles, streak goals, notifications, rewards, penalties, and AI recommendations are suggestions and voluntary. You decide whether, when, and how to perform them. Do not use Rosvon while driving or where device use would be unsafe or unlawful.</p>
+            <div class="warning-box"><p><strong>Not medical or mental-health care.</strong> Rosvon is not a medical device and does not diagnose, prevent, monitor, or treat any physical or mental-health condition. It does not replace a doctor, psychologist, psychiatrist, therapist, trainer, emergency service, or other qualified professional.</p></div>
+            <p>Before exercise, fasting, cold exposure, sleep changes, meditation, or another potentially demanding activity, consider your health, surroundings, experience, and professional advice. Stop if you experience pain, dizziness, distress, or other concerning symptoms. Seek emergency assistance where appropriate. HP or Health shown in Rosvon is a game score, not a measure of actual health.</p>
         </section>
 
-        <!-- ═══ 4. Your Data ══════════════════════════════════════════════ -->
         <section>
-            <h2>4. Your Data — Full Ownership &amp; Control</h2>
-            <div class="info-box">
-                <p><strong>This is the most important section.</strong> All personal content you create (habits, tasks, journal entries, notes, projects) belongs exclusively to you. We make no claim of ownership over your personal data.</p>
-            </div>
-
-            <h3>4.1 Where Your Personal Data Lives</h3>
-            <p>Your personal data — habits, tasks, projects, player info, journal entries, and notes — is <strong>all backed up to your personal Google Drive</strong> (App Data folder). This data is private to you; we cannot access, read, or view it.</p>
-
-            <h3>4.2 What Firebase Stores (Community Data Only)</h3>
-            <p>Firebase Firestore is used <strong>only</strong> for community-related data:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Data</th>
-                        <th>Storage</th>
-                        <th>Purpose</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Level, Rank, XP</td>
-                        <td>Firebase Firestore</td>
-                        <td>Leaderboard ranking</td>
-                    </tr>
-                    <tr>
-                        <td>Health, Gold</td>
-                        <td>Firebase Firestore</td>
-                        <td>Gamification status</td>
-                    </tr>
-                    <tr>
-                        <td>Challenges</td>
-                        <td>Firebase Firestore</td>
-                        <td>Friend challenges</td>
-                    </tr>
-                    <tr>
-                        <td>Profile Picture (DP)</td>
-                        <td>Firebase Storage</td>
-                        <td>Community identity</td>
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td>Firebase Firestore</td>
-                        <td>Community identity</td>
-                    </tr>
-                    <tr>
-                        <td>Friends List</td>
-                        <td>Firebase Firestore</td>
-                        <td>Social connections</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>4.3 Data Control</h3>
+            <h2>4. Your Content and Data Storage</h2>
+            <p>You retain ownership of content you create. You grant us a limited, non-exclusive license to host, process, transmit, back up, restore, and display that content only as needed to operate, secure, improve, and moderate the Service.</p>
             <ul>
-                <li><strong>Local Mode:</strong> Your data stays exclusively on your device in Android's secure DataStore. Nothing is transmitted.</li>
-                <li><strong>Sync Mode:</strong> If you sign in, personal data syncs to your personal Google Drive. Community data syncs to Firebase.</li>
-                <li><strong>Switch anytime:</strong> You can switch between local and sync mode at any time from Settings.</li>
-                <li><strong>Full deletion:</strong> You can delete all your data <strong>instantly from within the app</strong> (Settings → Account → Delete Account). This removes your Google Drive backup, Firebase data, Firebase account, and local data. No email required, no waiting period.</li>
+                <li><strong>On-device data:</strong> Core personal records are primarily stored locally. Device loss, corruption, clearing app data, uninstalling, or software defects may cause loss.</li>
+                <li><strong>Google Drive:</strong> If you enable backup, Rosvon uses the hidden Google Drive App Data folder associated with your Google account. Backup and restore depend on network access, Google authorization, quota, compatible versions, and provider availability. Verify important data independently.</li>
+                <li><strong>Firebase:</strong> Signed-in account records, community profiles and statistics, entitlements, purchase verification records, and related operational data may be stored or processed using Firebase and Google Cloud services.</li>
+                <li><strong>Diagnostics and ads:</strong> Firebase Analytics, Crashlytics, Performance Monitoring, Google Mobile Ads, and device/platform services may process identifiers, usage events, diagnostics, performance data, and ad-related data as described in the Privacy Policy and provider terms.</li>
             </ul>
-
-            <p>By using the App, you grant us a limited, non-exclusive, non-transferable license to store and process your content <em>solely for the purpose of providing the service to you</em>. This license ends immediately when you delete your data or account.</p>
+            <p>We do not guarantee that every backup is complete or that data can always be restored. You are responsible for keeping independent copies of content that is important to you.</p>
         </section>
 
-        <!-- ═══ 5. Community Features ════════════════════════════════════ -->
         <section>
-            <h2>5. Community Features</h2>
-
-            <h3>5.1 Scope of Community Features</h3>
-            <p>The Arise community consists of three features only:</p>
-            <ul>
-                <li><strong>Leaderboard:</strong> Ranks users by XP, level, and rank.</li>
-                <li><strong>Add Friends:</strong> Connect with other Arise users.</li>
-                <li><strong>Challenge Friends:</strong> Send and accept discipline challenges.</li>
-            </ul>
-
-            <div class="info-box">
-                <p><strong>There are NO posts, NO feed, NO content sharing, NO messaging, NO comments, NO likes, and NO social-media-style features.</strong> The only user-generated content visible to other users is your profile picture (DP) and your username.</p>
-            </div>
-
-            <h3>5.2 What Is Publicly Visible</h3>
-            <p>If you participate in Community features, the following information is visible to other Arise users:</p>
-            <ul>
-                <li>Username</li>
-                <li>Profile picture (DP), if you choose to set one</li>
-                <li>Level, XP, rank, health, and gold</li>
-            </ul>
-            <p>No other personal data (journal entries, tasks, habits, notes, email address, focus sessions, or screen time) is shared with other users.</p>
-
-            <h3>5.3 Community Content License</h3>
-            <p>For content visible in Community features (username, profile picture), you grant us a non-exclusive, royalty-free, worldwide license to display that content to other users of the App while you are a registered user. This license terminates immediately upon account deletion.</p>
-
-            <h3>5.4 Profile Picture and Copyright</h3>
-            <div class="warning-box">
-                <p><strong>⚠️ Important — Profile Pictures:</strong> Your profile picture (DP) is the primary user-generated content in Arise. You are solely responsible for any image you upload. By uploading a profile picture, you represent and warrant that:</p>
-                <p>• You own the copyright to the image, OR you have obtained a valid license or explicit permission from the copyright holder to use it, AND</p>
-                <p>• The image does not infringe any third party's intellectual property rights, privacy rights, or any other rights.</p>
-                <p>Uploading images of celebrities, actors, movie characters, brand logos, or other copyrighted material without authorization is <strong>strictly prohibited</strong> and may result in immediate account suspension and content removal. See our <a href="community-guidelines.html">Community Guidelines</a> for detailed rules.</p>
-            </div>
-
-            <h3>5.5 Content Moderation</h3>
-            <p>We reserve the right, but not the obligation, to review, moderate, or remove any user-generated content (profile pictures and usernames) that we determine, in our sole discretion, violates these Terms or our <a href="community-guidelines.html">Community Guidelines</a>. We are not responsible for any user-generated content uploaded by other users.</p>
+            <h2>5. Protocol, Permissions, and Blocking</h2>
+            <p>Protocol may request Usage Access, Accessibility Service access, notification permission, exact alarm access, overlay capability, and other Android permissions required for focus, limits, reminders, or blocking. Permissions are optional, but the related feature may not work without them. You may revoke permissions in Android Settings.</p>
+            <p>The Accessibility Service is used to detect and interrupt access to apps selected or limited by you. You must not use it to monitor another person, bypass device or workplace controls, or for any unlawful purpose. Android and device-manufacturer restrictions may delay or prevent timers, notifications, overlays, or blocks.</p>
+            <p>Strict Mode and penalties are voluntary commitments. They may restrict in-app changes or apply displayed XP, Gold, HP, life, key, credit, or ad consequences. Rosvon does not use Device Administrator to prevent uninstalling the App.</p>
         </section>
 
-        <!-- ═══ 6. Protocol Feature ══════════════════════════════════════ -->
         <section>
-            <h2>6. Protocol Feature — Permissions and Scope</h2>
-            <div class="info-box">
-                <p>Protocol exists for one reason: to help you reclaim your time from apps designed to steal it. The average person spends 4–7 hours per day on their phone — not by accident, but by design.</p>
-            </div>
-
-            <p>To function, Protocol requires sensitive Android permissions. Here is exactly what each one does — and critically, what it <em>never</em> does:</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Permission</th>
-                        <th>What It Does</th>
-                        <th>What It NEVER Does</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Usage Access</strong></td>
-                        <td>Reads how much time you spend in each app. Shown only to you. Never uploaded.</td>
-                        <td>Never leaves your device. We cannot see it.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Notifications</strong></td>
-                        <td>Delivers focus session alerts and reminders you configure.</td>
-                        <td>Never used for unsolicited marketing.</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <p>All Protocol permissions are <strong>opt-in</strong>. You can revoke any permission at any time through Android Settings. Revoking a permission only disables that specific Protocol feature — it does not affect the rest of the App.</p>
-
-            <p>Protocol data — screen time, focus sessions — is stored <strong>only on your device</strong>. It is never uploaded to any server, never analyzed by us, never shared with anyone.</p>
+            <h2>6. Aria and Other AI Features</h2>
+            <p>Rosvon uses Firebase AI/Google Gemini services to generate Aria responses, reflection prompts, task suggestions requested by you, and project plans. AI output is generated probabilistically and may be inaccurate, biased, outdated, incomplete, or inappropriate.</p>
+            <ul>
+                <li>When <strong>Access AI to your content</strong> is enabled from <strong>Aria → three-dot menu → Privacy</strong>, Rosvon may attach only the app-data categories permitted by your AI Privacy Controls. Notes are separately controlled from Journal and Reflection entries; project resource links follow the Tasks &amp; Projects control.</li>
+                <li>When that master setting is disabled, Rosvon does not attach live app content or runtime context. Recent Aria chat history and locally learned AI memories may still be used, and new learned memories may still be created. The message and details you deliberately submit are still sent to the AI provider so Aria can answer. An expressly requested project plan can be generated from those supplied details without granting access to existing tasks or project content.</li>
+                <li>AI chats and generated memories may be stored locally. Requests and responses are processed by Google under the applicable Firebase, Google Cloud, and Gemini terms, configurations, and retention practices.</li>
+                <li>AI credits may be deducted as shown in the App. An AI response, task, reminder, or plan should be reviewed before you rely on or act on it.</li>
+            </ul>
+            <div class="danger-box"><p>Do not use AI output as medical, mental-health, legal, financial, emergency, or other professional advice. Do not submit secrets or information you are not authorized to disclose. You remain responsible for important decisions and actions.</p></div>
         </section>
 
-        <!-- ═══ 6.1 Payments & Refunds ════════════════════════════════════ -->
         <section>
-            <h2>6.1 Payments, Subscriptions, and Refunds</h2>
-            <p>Certain features of the App, such as premium themes, cosmetic items, and in-app currencies (Gold, Keys), may be available via subscriptions or one-time in-app purchases.</p>
+            <h2>7. Community Profiles and User Content</h2>
+            <p>Signing in may create a Rosvon community profile. Depending on your privacy settings, your display name, username, profile photo, bio, level, XP, streaks, statistics, or leaderboard position may be visible to other users and may be searchable. Review community privacy controls before using these features.</p>
+            <p>For information you make visible to the community, you grant us a worldwide, non-exclusive, royalty-free license to host, reproduce, adapt for technical display, and show it within Rosvon for as long as needed to provide the feature. You may end this license by removing the content or deleting the account, subject to reasonable technical, legal, security, and backup retention.</p>
+            <p>You must not upload or display unlawful, infringing, deceptive, hateful, sexually explicit, exploitative, violent, harassing, privacy-invasive, malicious, or impersonating content. Do not expose another person's private information. You confirm that you own or have permission to use profile photos, names, text, and other content you provide.</p>
+            <p>We may review, restrict visibility, remove content, preserve evidence, or suspend accounts where reasonably necessary for safety, law, third-party rights, these Terms, or platform requirements. We do not promise to pre-screen all content. Complaints may be sent to the contact below with the username, content, reason, and supporting information.</p>
+        </section>
+
+        <section>
+            <h2>8. External Content, Articles, and YouTube</h2>
+            <p>Articles, videos, educational material, and links may be supplied by Rosvon or third parties. They are for general information and do not constitute professional advice. We do not control or endorse every third-party claim, site, advertisement, recommendation, or availability.</p>
+            <p>Embedded YouTube features are provided by YouTube. By using them, you also agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and acknowledge the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Do not copy, download, redistribute, circumvent ads or access controls, or otherwise use videos except as permitted by YouTube and applicable law.</p>
+        </section>
+
+        <section>
+            <h2>9. Purchases, Subscriptions, Refunds, and Virtual Items</h2>
+            <p>Paid subscriptions and in-app products are offered through Google Play. The price, billing period, taxes, included quantity, renewal terms, and offer shown at checkout control. We do not directly receive your full payment-card details.</p>
             <ul>
-                <li><strong>Payment Processing:</strong> All transactions are processed securely through the Google Play Store. We do not store or process your credit card or payment information directly.</li>
-                <li><strong>Refunds:</strong> Since all payments are managed by Google Play, refund requests are subject to Google Play's standard refund policies. We cannot directly issue refunds for in-app purchases. Please contact Google Play Support for any billing issues.</li>
+                <li>Subscriptions renew automatically unless cancelled through Google Play before renewal. Uninstalling Rosvon does not cancel a subscription.</li>
+                <li>Cancellation, refund, withdrawal, and billing-error rights are governed by applicable law and Google Play policy. We may assist or issue a refund where available or legally required; approval is not guaranteed.</li>
+                <li>XP, Gold, HP, lives, keys, credits, streaks, levels, rewards, and achievements are limited, revocable in-app features. They have no cash value, are not legal tender or property, cannot be redeemed for money, and may not be sold or transferred except where Rosvon expressly permits.</li>
+                <li>We may correct balances affected by error, fraud, chargeback, duplicate credit, abuse, or technical failure, subject to applicable consumer law.</li>
             </ul>
         </section>
 
-        <!-- ═══ 7. Acceptable Use ════════════════════════════════════════ -->
         <section>
-            <h2>7. Acceptable Use Policy</h2>
-            <p>By using the App, you agree <strong>NOT</strong> to:</p>
-            <ul>
-                <li>Use the App for any unlawful purpose or in violation of any applicable law or regulation.</li>
-                <li>Upload copyrighted images as your profile picture — including photos of celebrities, public figures, fictional characters, brand logos, or other copyrighted material — without authorization from the rights holder.</li>
-                <li>Use a username that impersonates any person, entity, or organization, or that contains offensive, hateful, or discriminatory language.</li>
-                <li>Harass, abuse, intimidate, threaten, defame, or harm other users through community features.</li>
-                <li>Manipulate XP, leaderboard rankings, challenge results, or any gamification data through cheating, exploiting bugs, or automated tools.</li>
-                <li>Spam friend requests, challenges, or other community interactions.</li>
-                <li>Attempt to gain unauthorized access to any part of the App, its servers, or infrastructure.</li>
-                <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App.</li>
-                <li>Upload or transmit viruses, malware, spyware, or any malicious code.</li>
-                <li>Use automated scripts, bots, or scrapers to access the App.</li>
-                <li>Attempt to circumvent, disable, or interfere with security features of the App.</li>
-                <li>Misrepresent your identity, qualifications, or affiliation with any person or organization.</li>
-            </ul>
-
-            <p>Violation of this policy may result in immediate account suspension or termination, removal of content, and where appropriate, reporting to law enforcement.</p>
+            <h2>10. Acceptable Use and Intellectual Property</h2>
+            <p>You may use Rosvon only for lawful personal use. You must not attack, scrape, overload, tamper with, cheat, automate abuse of, evade access controls or payment checks, introduce malware into, or obtain unauthorized access to the App or its services. Restrictions on reverse engineering apply only to the extent permitted by applicable law.</p>
+            <p>Rosvon's software, branding, interface, original articles, graphics, and other developer material are owned by or licensed to us and protected by law. These Terms do not transfer those rights. Third-party names, videos, libraries, and content remain the property of their respective owners.</p>
+            <p>For a copyright complaint, email <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a> with your identity and authority, the protected work, the exact location of the complained-of material, contact details, a good-faith statement, and supporting evidence. We may remove or restrict content and notify the affected user as required by applicable law.</p>
         </section>
 
-        <!-- ═══ 8. AI Features ═══════════════════════════════════════════ -->
         <section>
-            <h2>8. AI Features — Aria</h2>
-
-            <h3>8.1 How Aria Works</h3>
-            <p>Aria is Arise's AI coaching assistant. Aria uses the <strong>Gemini API</strong> (by Google) to provide personalized guidance and insights. Your data is sent securely to the Gemini API for processing and is handled transiently — it is <strong>not stored, logged, or retained</strong> by the API beyond the scope of the request.</p>
-
-            <h3>8.2 Your Control Over AI</h3>
-            <ul>
-                <li><strong>Opt out anytime:</strong> You can completely disable AI features from Settings → AI Privacy Controls. When disabled, no data is sent to any external API.</li>
-                <li><strong>Upcoming — Bring Your Own API Key:</strong> We are developing a feature that will allow you to use your own personal API keys from popular AI providers (such as Google, OpenAI, Anthropic, etc.) for even greater privacy and control. When you use your own key, AI requests go directly from your device to your chosen provider — Arise never sees the request or response.</li>
-            </ul>
-
-            <h3>8.3 Important Disclaimer</h3>
-            <div class="warning-box">
-                <p><strong>⚠️ Important Disclaimer:</strong> Aria provides general personal development guidance only.</p>
-                <p>AI-generated content is NOT a substitute for professional medical, psychological, psychiatric, financial, legal, or other professional advice. Always consult qualified professionals for such needs.</p>
-            </div>
-            <ul>
-                <li>AI responses may not always be accurate, complete, or up to date.</li>
-                <li>Do not rely on Aria for medical diagnosis or treatment decisions.</li>
-                <li>Do not rely on Aria for financial, legal, or other critical decisions.</li>
-                <li>We are not liable for any actions taken based on AI-generated content.</li>
-            </ul>
+            <h2>11. Account Deletion, Suspension, and Termination</h2>
+            <p>You may start verified account deletion in Settings or use the linked deletion page. Rosvon attempts to remove local data, its Google Drive backup, Firebase/Auth account data, community content controlled by us, and server-side purchase-token records included in the deletion flow. Network, re-authentication, provider, or service failures may require you to retry or contact support.</p>
+            <p>Some records may be retained where reasonably necessary for security, fraud prevention, transaction reconciliation, dispute resolution, backups, or legal obligations. Provider-controlled analytics, crash, billing, and platform records follow the provider's retention rules. Deletion is permanent and may make purchases, backups, and content unrecoverable.</p>
+            <p>We may restrict, suspend, or terminate access for material or repeated violations, safety or security threats, fraud, legal requirements, or discontinuation of the Service. Where reasonable, we will provide notice or an opportunity to appeal. Provisions that by nature should survive termination will survive.</p>
         </section>
 
-        <!-- ═══ 9. Intellectual Property ═════════════════════════════════ -->
         <section>
-            <h2>9. Intellectual Property</h2>
-            <p>The App's design, code, graphics, branding, logos, and all other non-user content are owned by Roshan Sharma and protected by applicable intellectual property laws, including copyright and trademark law.</p>
-            <p>Your personal data and content are <strong>explicitly excluded</strong> — those belong to you.</p>
-            <p>You may not use, copy, reproduce, distribute, modify, or create derivative works of the App or its content without our express written permission.</p>
+            <h2>12. Disclaimers</h2>
+            <p>To the extent permitted by law, Rosvon is provided "as is" and "as available." We do not warrant uninterrupted operation, perfect blocking, accurate notifications, successful backup or restore, error-free software, continued third-party services, or that suggested or generated content will suit you.</p>
+            <p>Nothing in these Terms excludes warranties, remedies, or rights that cannot lawfully be excluded, including applicable consumer rights.</p>
         </section>
 
-        <!-- ═══ 10. DMCA / Copyright ══════════════════════════════════════ -->
         <section>
-            <h2>10. Copyright Infringement — DMCA Notice &amp; Takedown</h2>
-            <p>We respect intellectual property rights. If you believe that a user's profile picture on the App infringes your copyright, please send a notice to us with the following information:</p>
-            <ol>
-                <li>Your name and contact information (email address).</li>
-                <li>Identification of the copyrighted work you claim has been infringed.</li>
-                <li>Identification of the infringing material (e.g., a specific user's profile picture) and enough information to locate it.</li>
-                <li>A statement that you have a good faith belief that the use is not authorized by the copyright owner, its agent, or the law.</li>
-                <li>A statement that the information in your notice is accurate and, under penalty of perjury, that you are the copyright owner or authorized to act on the owner's behalf.</li>
-                <li>Your electronic or physical signature.</li>
-            </ol>
-            <div class="info-box">
-                <p><strong>Send copyright notices to:</strong></p>
-                <p>Email: <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a></p>
-                <p>Subject line: "Copyright Infringement Notice — Arise App"</p>
-                <p>We will process valid DMCA notices and remove infringing content promptly, typically within 48–72 hours of receiving a valid notice.</p>
-            </div>
-            <p>Repeat infringers' accounts will be terminated.</p>
+            <h2>13. Limitation of Liability and Indemnity</h2>
+            <p>To the extent permitted by law, neither party is liable for indirect, incidental, special, punitive, or consequential loss that was not reasonably foreseeable. Our aggregate liability arising from the Service will not exceed the greater of INR 500 or the amount you paid us during the 12 months before the event giving rise to the claim.</p>
+            <p>This limitation does not apply to fraud, wilful misconduct, gross negligence, death or personal injury caused by negligence, breach of confidentiality or data-protection duties where liability cannot be limited, or any other liability that applicable law does not permit us to exclude or limit.</p>
+            <p>To the extent permitted by law, you will indemnify us against third-party claims and reasonable costs directly caused by your unlawful community content, infringement of third-party rights, fraud, or deliberate misuse of the Service. This does not require you to indemnify us for our own breach, negligence, or unlawful conduct.</p>
         </section>
 
-        <!-- ═══ 11. Disclaimers ══════════════════════════════════════════ -->
         <section>
-            <h2>11. Disclaimers and Limitation of Liability</h2>
-
-            <h3>11.1 No Warranties</h3>
-            <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR UNINTERRUPTED SERVICE.</p>
-            <p>We do not warrant that the App will be error-free, that defects will be corrected, or that the App is free of viruses or harmful components.</p>
-
-            <h3>11.2 Limitation of Liability</h3>
-            <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ROSHAN SHARMA SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR BUSINESS INTERRUPTION, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE APP, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
-            <p>OUR TOTAL CUMULATIVE LIABILITY TO YOU FOR ANY CLAIMS ARISING OUT OF OR RELATING TO THESE TERMS OR THE APP SHALL NOT EXCEED ₹500 (FIVE HUNDRED INDIAN RUPEES) OR THE AMOUNT YOU PAID US IN THE PAST 12 MONTHS, WHICHEVER IS GREATER.</p>
-
-            <h3>11.3 Indemnification</h3>
-            <p>You agree to indemnify, defend, and hold harmless Roshan Sharma and any affiliates from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with: (a) your access to or use of the App; (b) your violation of these Terms; (c) your violation of any third-party right, including copyright, privacy, or intellectual property rights; or (d) any profile picture or username you upload or use through the App.</p>
-
-            <h3>11.4 Medical, Educational, and Content Disclaimer</h3>
-            <p>Arise is designed for productivity, habit tracking, and personal development, with a specific focus on helping students and individuals build discipline.</p>
-            <ul>
-                <li><strong>Not Medical Advice:</strong> Arise is NOT a substitute for professional medical, psychiatric, or psychological advice. If you are experiencing depression, severe anxiety, or other mental health issues, please consult a qualified healthcare provider immediately.</li>
-                <li><strong>Third-Party Content & Educational Use:</strong> The App features articles, motivational content, and embedded YouTube videos. This content is provided for educational and inspirational purposes only. We do not guarantee the accuracy, completeness, or professional validity of third-party content. While the App helps students manage time, it does not guarantee academic success or specific grades.</li>
-            </ul>
+            <h2>14. Governing Law and Disputes</h2>
+            <p>These Terms are governed by the laws of India. Before filing a claim, each party should attempt in good faith for 30 days to resolve it through the contact below. Subject to mandatory consumer forums and other non-waivable rights, disputes will be submitted to courts of competent jurisdiction in India. These Terms do not force arbitration or waive a remedy that applicable law gives you.</p>
         </section>
 
-        <!-- ═══ 12. Account Deletion ═════════════════════════════════════ -->
         <section>
-            <h2>12. Account Deletion</h2>
-            <div class="info-box">
-                <p><strong>Deletion is instant and performed from within the app only.</strong></p>
-                <p>Navigate to Settings → Account → Delete Account. After re-authenticating with your Google account, all your data — Google Drive backup, Firebase community data, Firebase Auth account, and local data — will be <strong>permanently and immediately deleted</strong>.</p>
-            </div>
-            <p>There is no email-based deletion method and no waiting period. Deletion is permanent and irreversible. For full details, see our <a href="delete-account.html">Delete My Data</a> page.</p>
+            <h2>15. Changes, Severability, and Entire Agreement</h2>
+            <p>We may update these Terms when the Service, law, or provider requirements change. We will update the date above and provide reasonable notice of material changes where required. If consent is legally required, continued use alone will not replace that consent. If a provision is unenforceable, it will be limited or removed only as necessary and the remainder will continue.</p>
+            <p>These Terms, the Privacy Policy, Community Guidelines, and purchase terms shown at checkout form the agreement for the Service. A failure to enforce a provision is not a waiver.</p>
         </section>
 
-        <!-- ═══ 13. Governing Law ═════════════════════════════════════════ -->
         <section>
-            <h2>13. Governing Law and Dispute Resolution</h2>
-            <p>These Terms are governed by the laws of India, without regard to conflict of law principles. Any disputes arising out of or in connection with these Terms shall first be attempted to be resolved through good-faith negotiation between the parties.</p>
-            <p>If negotiation fails, disputes shall be subject to the jurisdiction of the courts of India. Notwithstanding the foregoing, we reserve the right to seek injunctive relief in any court of competent jurisdiction.</p>
-        </section>
-
-        <!-- ═══ 14. Changes ══════════════════════════════════════════════ -->
-        <section>
-            <h2>14. Changes to These Terms</h2>
-            <p>We may update these Terms from time to time. When we make material changes, we will:</p>
-            <ul>
-                <li>Update the "Last Updated" date at the top of this page.</li>
-                <li>Notify you through an in-app notification before the changes take effect.</li>
-                <li>For significant changes, provide at least 7 days' notice before the changes become effective.</li>
-            </ul>
-            <p>Your continued use of the App after changes become effective constitutes your acceptance of the updated Terms. If you do not agree to the updated Terms, you must stop using the App and delete your account.</p>
-        </section>
-
-        <!-- ═══ 15. Termination ══════════════════════════════════════════ -->
-        <section>
-            <h2>15. Termination</h2>
-            <ul>
-                <li><strong>By you:</strong> You may terminate your account at any time through Settings → Account → Delete Account. Deletion is instant.</li>
-                <li><strong>By us:</strong> We may suspend or terminate your access immediately if you violate these Terms, particularly the Acceptable Use Policy.</li>
-                <li><strong>Effect of termination:</strong> Upon termination, your right to use the App ceases. All your data is deleted immediately per our deletion policy (see our <a href="delete-account.html">Delete My Data</a> page).</li>
-            </ul>
-        </section>
-
-        <!-- ═══ 16. Miscellaneous ═════════════════════════════════════════ -->
-        <section>
-            <h2>16. Miscellaneous</h2>
-            <ul>
-                <li><strong>Entire Agreement:</strong> These Terms, together with our Privacy Policy and Community Guidelines, constitute the entire agreement between you and us regarding the App.</li>
-                <li><strong>Severability:</strong> If any provision of these Terms is found to be unenforceable, that provision will be modified to the minimum extent necessary, and the remaining provisions will continue in full force and effect.</li>
-                <li><strong>No Waiver:</strong> Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</li>
-                <li><strong>Assignment:</strong> You may not assign your rights or obligations under these Terms without our prior written consent. We may assign our rights and obligations without restriction.</li>
-                <li><strong>Force Majeure:</strong> We shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control.</li>
-            </ul>
-        </section>
-
-        <!-- ═══ 17. Contact ══════════════════════════════════════════════ -->
-        <section>
-            <h2>17. Contact Us</h2>
-            <p>Questions about these Terms? Reach us at:</p>
-            <div class="info-box">
-                <p><strong>Developer:</strong> Roshan Sharma</p>
-                <p><strong>Email:</strong> <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a></p>
-                <p><strong>App:</strong> Arise — A Self Development Ecosystem</p>
-                <p><strong>Platform:</strong> Google Play Store (Android)</p>
-            </div>
-            <p>We will acknowledge your message within 48 hours and respond substantively within 30 days.</p>
-            <p>
-                <a href="index.html">Home</a> &nbsp;|&nbsp;
-                <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
-                <a href="community-guidelines.html">Community Guidelines</a> &nbsp;|&nbsp;
-                <a href="delete-account.html">Delete My Data</a>
-            </p>
+            <h2>16. Contact and Grievance Redressal</h2>
+            <p><strong>Developer and Grievance Officer:</strong> Roshan Sharma<br><strong>Email:</strong> <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a><br><strong>App:</strong> Rosvon - Digital Discipline &amp; Growth<br><strong>Country:</strong> India</p>
+            <p>Please include your account email (if applicable), the feature involved, a clear description, relevant dates, and supporting screenshots or links. We will acknowledge and handle legally covered grievances within the periods required by applicable Indian law. Urgent safety, impersonation, intimate-image, copyright, and account-security reports should be clearly identified in the subject line.</p>
+            <p><strong>Legal note:</strong> These Terms are product-specific but are not a substitute for advice from a qualified Indian lawyer. Platform rules and law may change.</p>
         </section>
 
         <footer>
-            <p>&copy; 2025–2026 Roshan Sharma. All rights reserved.</p>
-            <p>Arise — A Self Development Ecosystem</p>
-            <p style="margin-top: 12px;">These Terms of Service were created to comply with Google Play Store requirements and applicable laws including the IT Act 2000 (India), GDPR (EU), and CCPA (California).</p>
+            <p>&copy; 2025-2026 Roshan Sharma. All rights reserved.</p>
+            <p>Rosvon - Digital Discipline &amp; Growth</p>
         </footer>
-
     </div>
 </body>
 </html>
