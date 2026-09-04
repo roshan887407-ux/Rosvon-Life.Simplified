@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Your Data — Arise</title>
-    <meta name="description" content="Delete your Arise account and all associated data from within the app or by email request. Learn what gets deleted and how.">
-    <link rel="icon" type="image/png" href="../assets/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
-    <link rel="apple-touch-icon" href="../assets/favicon.png">
+    <title>Delete Your Data — Rosvon</title>
+    <meta name="description" content="Request deletion of your Rosvon account and review what the current in-app and email paths do, do not delete, and may require you to remove manually.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
     <style>
         :root {
             --bg: #0D0F14;
@@ -235,25 +235,26 @@
     <div class="container">
 
         <header>
-            <h1>Delete Your Data — <span class="app-name">Arise</span></h1>
-            <p class="subtitle">Your data belongs to you. Delete it instantly from within the app or request deletion via email.</p>
+            <h1>Delete Your Data — <span class="app-name">Rosvon</span></h1>
+            <p class="subtitle">Start deletion in the App or request server-account assistance by email. Review the current technical limits below.</p>
+            <p class="subtitle">Last updated: September 3, 2026</p>
         </header>
 
         <!-- ═══ Intro ══════════════════════════════════════════════════════ -->
-        <p>Arise is built on the principle that your data belongs to you — completely and unconditionally. You can delete your account and all associated data directly from within the app, or request account deletion by email.</p>
+        <p>Rosvon provides an in-app deletion flow and an external email request path. The current in-app flow attempts several local, Google Drive, Firebase, and Google-account operations; it is not instant, can fail, and does not yet remove every UID-linked backend transaction/audit record.</p>
 
         <!-- ═══ Method 1: In-App Deletion ═════════════════════════════════ -->
         <div class="method-card">
             <span class="method-badge">RECOMMENDED (METHOD 1)</span>
             <h3>📱 Delete Directly from Within the App</h3>
-            <p>Delete all your cloud data, Google Drive backup, Firebase account, and local device data in one step. Deletion is <strong>instant and permanent</strong>.</p>
+            <p>This flow attempts to delete a locally identified Drive backup, supported Firebase/Storage records, Firebase Authentication account, supported purchase-token records, and app-private local data. It requires network/provider access and may require retry or support. Completed deletion is permanent.</p>
             <ol class="steps">
-                <li>Open the <strong>Arise app</strong> on your Android device.</li>
+                <li>Open the <strong>Rosvon app</strong> on your Android device.</li>
                 <li>Navigate to the <strong>Help &amp; Support</strong> section from the main navigation menu or drawer.</li>
                 <li>Scroll down and tap <strong>"Delete Account &amp; Data"</strong>.</li>
                 <li>Read the confirmation dialog showing what data will be removed.</li>
-                <li>Verify your identity by re-authenticating with your account.</li>
-                <li>Tap <strong>"Confirm Delete"</strong>. Your account and all associated data will be <strong>permanently deleted immediately</strong>.</li>
+                <li>While signed in, type the displayed account email or <strong>DELETE</strong> phrase to confirm. The current App does not perform a fresh Google credential reauthentication.</li>
+                <li>Tap <strong>"Confirm Delete"</strong>. Wait for the result. If Drive, Firebase, Auth, or network work fails, retry or contact support. Do not assume all data is gone until the App reports completion and the current exceptions below have been handled.</li>
             </ol>
         </div>
 
@@ -265,14 +266,14 @@
 
             <div class="info-box">
                 <p><strong>Send an email request:</strong></p>
-                <p>📧 Email: <a href="mailto:rosvon.support@gmail.com?subject=Account Deletion Request — Arise App">rosvon.support@gmail.com</a></p>
-                <p>📌 Subject: "Account Deletion Request — Arise App"</p>
+                <p>📧 Email: <a href="mailto:rosvon.support@gmail.com?subject=Account Deletion Request — Rosvon App">rosvon.support@gmail.com</a></p>
+                <p>📌 Subject: "Account Deletion Request — Rosvon App"</p>
                 <p>📝 Include: Your registered email address and username so we can locate your account.</p>
-                <p>⏱️ Processing Time: Within <strong>48 hours</strong>.</p>
+                <p>⏱️ Processing time depends on identity verification, provider access, and applicable law; the App does not guarantee completion within 48 hours.</p>
             </div>
 
             <div class="warning-box">
-                <p><strong>⚠️ Important Note on Email Deletion Requests:</strong> An email request enables us to delete your personal account data stored on <strong>our servers only</strong> (Firebase Firestore, Firebase Storage, and Firebase Authentication). Because your personal Google Drive backups and local phone data are stored privately on your own accounts and device, we cannot remotely access or delete them for you. To delete data from your phone and Google Drive, you must manually delete them using the <strong>Help &amp; Support</strong> section inside the Arise app or by managing your local app data and Google account storage.</p>
+                <p><strong>⚠️ Email request scope:</strong> Email is a request for manual handling of supported Firebase/Auth/Storage account data. It cannot erase app-private data on your phone or your Drive App Data files. Use Rosvon's in-app flow, Android clear-data/uninstall, and Google Account storage controls as applicable. The current backend exceptions listed below must also be handled before server deletion can be described as complete.</p>
             </div>
         </div>
 
@@ -292,62 +293,50 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Username, email, profile picture (DP)</td>
-                        <td>Firebase Firestore &amp; Storage</td>
-                        <td><span class="badge-yes">YES (Instant)</span></td>
-                        <td><span class="badge-yes">YES (By Support)</span></td>
+                        <td>Auth account; user_info/user_data; community profile; profile pictures; supported purchase-token and challenge records</td>
+                        <td>Firebase Auth, Firestore, and Storage</td>
+                        <td>Attempted after confirmation; network/provider failure can require retry</td>
+                        <td>Manual support handling after identity verification; no fixed completion time</td>
                     </tr>
                     <tr>
-                        <td>Level, rank, XP, health, gold, challenges</td>
-                        <td>Firebase Firestore</td>
-                        <td><span class="badge-yes">YES (Instant)</span></td>
-                        <td><span class="badge-yes">YES (By Support)</span></td>
+                        <td>AI-credit consumption records</td>
+                        <td>Firestore: ai_credit_consumptions</td>
+                        <td><strong>NO — current deletion Function omits this collection</strong></td>
+                        <td>Must be handled manually; current code has no automatic expiry</td>
                     </tr>
                     <tr>
-                        <td>Firebase Authentication account</td>
-                        <td>Firebase Auth</td>
-                        <td><span class="badge-yes">YES (Instant)</span></td>
-                        <td><span class="badge-yes">YES (By Support)</span></td>
+                        <td>Golden Key redemption records</td>
+                        <td>Firestore: golden_key_redemptions</td>
+                        <td><strong>NO — current deletion Function omits this collection</strong></td>
+                        <td>Must be handled manually; current code has no automatic expiry</td>
                     </tr>
                     <tr>
-                        <td>Friends list and challenge history</td>
-                        <td>Firebase Firestore</td>
-                        <td><span class="badge-yes">YES (Instant)</span></td>
-                        <td><span class="badge-yes">YES (By Support)</span></td>
+                        <td>Supported tasks, habits, journals, notes, projects, profile/game state, preferences, and selected media backup</td>
+                        <td>Google Drive App Data Folder</td>
+                        <td>Attempted only when local backup/sync markers identify the backup; an orphan can remain</td>
+                        <td>Not remotely accessible to support; user must remove it through the App/Google Account controls</td>
                     </tr>
                     <tr>
-                        <td>Habits, tasks, journal entries, notes, projects</td>
-                        <td>Google Drive (App Data Folder)</td>
-                        <td><span class="badge-yes">YES (Instant)</span></td>
-                        <td>⚠️ Manual deletion required by user via Help &amp; Support or Google Account</td>
-                    </tr>
-                    <tr>
-                        <td>Local app data (on-device DataStore)</td>
+                        <td>Room, DataStore, SharedPreferences, app-private files/cache, alarms, and scheduled work</td>
                         <td>Your phone</td>
-                        <td><span class="badge-yes">YES (Instant)</span></td>
-                        <td>⚠️ Manual deletion required by user via Help &amp; Support or app uninstall</td>
+                        <td>Cleared at the end of a successful in-app deletion sequence</td>
+                        <td>Not remotely accessible; use Android clear-data/uninstall</td>
                     </tr>
                     <tr>
-                        <td>Anonymized analytics data</td>
-                        <td>Firebase Analytics</td>
-                        <td>Anonymized (not linked to identity)</td>
-                        <td>Anonymized (per Google's 14-month policy)</td>
-                    </tr>
-                    <tr>
-                        <td>Crash/performance logs</td>
-                        <td>Firebase Crashlytics</td>
-                        <td>Anonymized (not linked to identity)</td>
-                        <td>Anonymized (per Google's 90-day policy)</td>
+                        <td>Firebase Analytics, Crashlytics, Performance/Sessions, Mobile Ads, Billing, and platform records</td>
+                        <td>Google/provider systems</td>
+                        <td>Not guaranteed by the in-app deletion Function</td>
+                        <td>Provider settings, terms, and legal retention apply; source code does not prove a fixed 14/90-day period or anonymity</td>
                     </tr>
                 </tbody>
             </table>
 
             <div class="warning-box">
-                <p><strong>⚠️ Deletion is permanent and irreversible.</strong> Once your server account and data are deleted, they cannot be recovered.</p>
+                <p><strong>⚠️ Completed deletion is permanent and irreversible.</strong> The current omissions above mean that an in-app success must not be described as deletion of every provider or transaction record.</p>
             </div>
 
             <h3>Guest Mode (Local Data) Note</h3>
-            <p>If you use Arise in <strong>Guest (Local) Mode</strong> without an account, your data is stored only on your device. To delete it, simply <strong>uninstall the app</strong> or clear storage in your device settings. This completely removes all locally stored data.</p>
+            <p>If you use Rosvon in <strong>Guest Mode</strong> without signing in, clearing App storage or uninstalling removes Rosvon's app-private local records. Google Analytics, Crashlytics, Performance, Mobile Ads, Play, Android, or other provider-held records are outside the local App sandbox and follow provider retention.</p>
         </section>
 
         <!-- ═══ Rights ════════════════════════════════════════════════════ -->
@@ -377,7 +366,7 @@
                     <tr>
                         <td><strong>Right to Portability</strong></td>
                         <td>All users</td>
-                        <td>Via Google Drive backup feature in-app</td>
+                        <td>Contact support for any legally required complete export. Drive backup is a restore format and excludes AI chat/memories and some Protocol focus history.</td>
                     </tr>
                     <tr>
                         <td><strong>Right to Correction</strong></td>
@@ -392,7 +381,7 @@
                 </tbody>
             </table>
 
-            <p>We respond to all data privacy requests within the required statutory timeframe (typically within <strong>30 days</strong>).</p>
+            <p>We will respond within the period required by applicable law after necessary identity verification. The App does not itself guarantee a 30-day response.</p>
         </section>
 
         <!-- ═══ Contact ══════════════════════════════════════════════════ -->
@@ -401,9 +390,9 @@
             <div class="info-box">
                 <p><strong>Developer:</strong> Roshan Sharma</p>
                 <p><strong>Email:</strong> <a href="mailto:rosvon.support@gmail.com">rosvon.support@gmail.com</a></p>
-                <p><strong>App:</strong> Arise — Digital Discipline &amp; Growth</p>
+                <p><strong>App:</strong> Rosvon</p>
                 <p><strong>Platform:</strong> Google Play Store (Android)</p>
-                <p><strong>Response Time:</strong> Within 48 hours</p>
+                <p><strong>Response Time:</strong> No fixed 48-hour response is guaranteed by the current App; legally required periods apply.</p>
             </div>
             <p>
                 <a href="index.html">Home</a> &nbsp;|&nbsp;
@@ -415,8 +404,8 @@
 
         <footer>
             <p>&copy; 2025–2026 Roshan Sharma. All rights reserved.</p>
-            <p>Arise — Digital Discipline &amp; Growth</p>
-            <p style="margin-top: 12px;">This page satisfies Google Play Store's account deletion requirements and applicable data protection laws including GDPR, CCPA, and India's DPDP Act.</p>
+            <p>Rosvon</p>
+            <p style="margin-top: 12px;">This page describes the current deletion paths and their limits. It does not certify Google Play or legal compliance; the implementation omissions above should be fixed before publication.</p>
         </footer>
 
     </div>
